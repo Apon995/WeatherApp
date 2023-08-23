@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather App</title>
+    <link rel="icon" type="icon/imgae" href="./assets/Logo.png">
+    <!-- -google-fonts-cdn- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <!-- --tailwind-css-cdn-- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- --font-awsome-cdn-- -->
+    <script src="https://kit.fontawesome.com/4fe709d572.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="font-family: 'Roboto', sans-serif"
+    class="bg-gradient-to-tr from-[#00feba] to-[#5b548a] md:bg-[url('./assets/bg.jpg')] bg-no-repeat bg-cover bg-center">
+    <section class="min-h-screen w-full flex flex-col items-center py-1">
+        <div class="h-16 lg:w-[40%] md:w-[60%] w-[95%] border-[#adadad] rounded-lg inline-flex pt-2">
+            <input type="text" name="Search" id="Search"
+                class="font-semibold text-xl outline-none border-none rounded-l-lg px-2 h-full w-[80%]"
+                placeholder="Search weather" />
+            <button onclick="searchWeather()" id="searchbtn"
+                class="w-[20%] hover:opacity-80 active:bg-inherit h-full bg-slate-50 text-2xl rounded-r-lg">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <h1 class="text-base text-red-700 font-extrabold pt-1 absolute top-[70px] text-center" id="error"></h1>
+
+        <div class="flex flex-col items-center">
+            <img src="./assets/searching.gif" class="weather-icon" alt="searching" />
+            <p class="text-xl text-gray-900 font-medium" id="skydisc">Searching</p>
+            <h1 class="text-6xl text-black font-bold" id="temp">00°C</h1>
+            <h2 class="text-3xl text-black font-semibold" id="city">Searching</h2>
+            <p class="text-xl text-black">in</p>
+            <h2 class="text-base text-gray-950 font-medium" id="country">
+                searching
+            </h2>
+        </div>
+
+        <div class="flex justify-between md:justify-around w-full items-center md:px-0 px-4 md:pt-0 pt-3 h-full">
+            <div class="text-center space-y-1">
+                <img src="./assets/images_humidity.png" class="" />
+                <h1 class="text-2xl text-black md:text-white font-semibold" id="humidity">
+                    00%
+                </h1>
+                <h1 class="text-xl font-medium text-black md:text-white">Humidity</h1>
+            </div>
+            <div>
+                <img src="./assets/images_wind.png" class="mx-auto" />
+                <h1 class="text-2xl text-black md:text-white font-semibold" id="wind">
+                    0.00Km/h
+                </h1>
+                <h2 class="text-xl font-medium text-black md:text-white">
+                    Wind speed
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <script src="./weather.js"></script>
+</body>
+
+</html>
